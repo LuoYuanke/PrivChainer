@@ -5,6 +5,7 @@ from chainer.utils import type_check
 
 def concat_variable(gx, g_input):
     """concatenate the inputs to a tuple of variable
+
     Inputs:
         None
         ~chainer.Variable
@@ -13,7 +14,6 @@ def concat_variable(gx, g_input):
     Outputs:
         None: When both of gx and g_input is None
         tuple of variable: Otherwise
-
     """
 
     sum_gx = ()
@@ -63,12 +63,12 @@ class AccumulateAdd(function_node.FunctionNode):
 
 def accumulate_add(xs):
     """Element-wise add the input arrays.
+
     Inputs:
         ~chainer.Variable: Tuple of variable.
 
     Returns:
         ~chainer.Variable: Output variable.
-
     """
 
     return AccumulateAdd().apply(xs)[0]
