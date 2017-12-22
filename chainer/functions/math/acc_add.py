@@ -1,11 +1,10 @@
+from chainer import function_node
 from chainer import utils
 from chainer.utils import type_check
-from chainer import function_node
 
 
 def concat_variable(gx, g_input):
-    """
-    concatenate the inputs to a tuple of variable
+    """concatenate the inputs to a tuple of variable
     Inputs:
         None
         ~chainer.Variable
@@ -14,7 +13,9 @@ def concat_variable(gx, g_input):
     Outputs:
         None: When both of gx and g_input is None
         tuple of variable: Otherwise
+
     """
+
     sum_gx = ()
     if isinstance(gx, tuple):
         sum_gx = gx
@@ -67,5 +68,7 @@ def accumulate_add(xs):
 
     Returns:
         ~chainer.Variable: Output variable.
+
     """
+
     return AccumulateAdd().apply(xs)[0]
