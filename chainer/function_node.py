@@ -8,9 +8,9 @@ import six
 
 import chainer
 from chainer.backends import cuda
-from chainer import _backprop_utils
 from chainer import configuration
 from chainer import function_hook
+from chainer import _backprop_utils
 from chainer.utils import experimental
 from chainer.utils import type_check
 from chainer import variable
