@@ -9,8 +9,8 @@ import numpy
 
 import chainer
 from chainer.backends import cuda
-from chainer import initializers
 from chainer import _backprop_utils
+from chainer import initializers
 from chainer.initializers import constant
 from chainer.utils import argument
 
